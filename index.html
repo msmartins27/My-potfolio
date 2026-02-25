@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alina Martin - Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="logo">Alina Martin</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Slides Container -->
+        <div class="slides-wrapper">
+            <!-- Home Section -->
+            <section id="home" class="slide active-slide">
+                <div class="home-content">
+                    <div class="home-text">
+                        <h1>Hi, I'm <span class="highlight">Alina Martin</span></h1>
+                        <h2 class="subtitle">Computer Science Student | IT Technician | Entrepreneur</h2>
+                        <h3 class="tagline">Building the Web, One Line at a Time</h3>
+                        <p class="description dotted-border">Third-year Computer Science student at University of Science and Technology with hands-on experience as an IT Technician Intern in a hospital environment. Also a small business owner running a perfume business.</p>
+                        <div class="info-box">
+                            <h4>Quick Links:</h4>
+                            <p>
+                                <a href="https://github.com/alinamartin" target="_blank" class="custom-link">GitHub</a> | 
+                                <a href="https://linkedin.com/in/alinamartin" target="_blank" class="custom-link">LinkedIn</a> | 
+                                <a href="#contact" class="custom-link">Contact Me</a>
+                            </p>
+                        </div>
+                        <div class="button-group">
+                            <button class="cta-button" onclick="navigateToSlide('contact')">Get In Touch</button>
+                            <a href="ALINA MARTIN CV  (2).pdf.pdf" download class="download-btn">Download CV</a>
+                        </div>
+                    </div>
+                    <div class="home-image">
+                        <img src="WhatsApp Image 2026-02-24 at 3.05.21 PM.jpeg" alt="Alina Martin" class="profile-img">
+                    </div>
+                </div>
+                <button class="next-btn" onclick="nextSlide()">Next →</button>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="slide">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="WhatsApp Image 2026-02-24 at 3.05.21 PM (1).jpeg" alt="About Alina">
+                    </div>
+                    <div class="about-text">
+                        <h3>Hello! I'm Alina Ndasilwohenda Martin</h3>
+                        <p>I'm a passionate third-year Computer Science student at the University of Science and Technology, combining my love for technology with entrepreneurial spirit.</p>
+                        
+                        <h4>My Journey</h4>
+                        <p>My journey in technology began with a curiosity about how systems work. During my internship at Katutura Intermediate Hospital, I gained hands-on experience in IT support, troubleshooting, and network management. This experience taught me the importance of reliable technology in critical environments.</p>
+                        
+                        <h4>Entrepreneurship</h4>
+                        <p>Beyond technology, I'm also a small business owner running a perfume business. This venture has taught me valuable lessons in customer service, inventory management, and digital marketing. I believe in combining technical skills with business acumen to create meaningful solutions.</p>
+                        
+                        <h4>My Values</h4>
+                        <div class="values-grid">
+                            <div class="value-item">
+                                <span class="value-icon">💡</span>
+                                <p>Innovation</p>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-icon">🤝</span>
+                                <p>Teamwork</p>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-icon">📚</span>
+                                <p>Continuous Learning</p>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-icon">🎯</span>
+                                <p>Problem Solving</p>
+                            </div>
+                        </div>
+                        
+                        <h5>Languages</h5>
+                        <p><strong>English:</strong> Good | <strong>Oshiwambo:</strong> Good</p>
+                        
+                        <a href="ALINA MARTIN CV  (2).pdf.pdf" download class="download-cv-btn">
+                            <span>📄</span> Download My CV
+                        </a>
+                    </div>
+                </div>
+                <button class="back-btn" onclick="prevSlide()">← Back</button>
+                <button class="next-btn" onclick="nextSlide()">Next →</button>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="slide">
+                <h2 class="section-title">My Skills</h2>
+                <div class="skills-content">
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon">🐍</div>
+                            <h3>Python</h3>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">🗄️</div>
+                            <h3>SQL</h3>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">💻</div>
+                            <h3>IT Support & Troubleshooting</h3>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">🌐</div>
+                            <h3>Network Management</h3>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">🔧</div>
+                            <h3>Git & GitHub</h3>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">📊</div>
+                            <h3>Microsoft Office</h3>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-image">
+                        <img src="WhatsApp Image 2026-02-24 at 3.05.21 PM (2).jpeg" alt="Skills">
+                    </div>
+                </div>
+                <button class="back-btn" onclick="prevSlide()">← Back</button>
+                <button class="next-btn" onclick="nextSlide()">Next →</button>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="slide">
+                <h2 class="section-title">My Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="WhatsApp Image 2026-02-24 at 3.05.21 PM (3).jpeg" alt="Perfume Business">
+                        </div>
+                        <div class="project-info">
+                            <h3>Perfume Business</h3>
+                            <p>Small business owner selling premium perfumes. Managing inventory, customer relations, and online marketing. Combining entrepreneurship with technology skills.</p>
+                            <div class="project-tags">
+                                <span class="tag">Business</span>
+                                <span class="tag">Sales</span>
+                                <span class="tag">Marketing</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="WhatsApp Image 2026-02-24 at 3.05.21 PM (4).jpeg" alt="Hospital IT">
+                        </div>
+                        <div class="project-info">
+                            <h3>Hospital IT Support System</h3>
+                            <p>Provided comprehensive IT support for hospital staff and administrative systems, including system troubleshooting, network maintenance, and digital record management.</p>
+                            <div class="project-tags">
+                                <span class="tag">IT Support</span>
+                                <span class="tag">Windows</span>
+                                <span class="tag">Networking</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="WhatsApp Image 2026-02-23 at 5.25.51 PM (1).jpeg" alt="Database Project">
+                        </div>
+                        <div class="project-info">
+                            <h3>Database & Python Projects</h3>
+                            <p>Developed database solutions using SQL and Python automation scripts to improve operational efficiency. Focus on file organization and system processes.</p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">SQL</span>
+                                <span class="tag">Automation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="back-btn" onclick="prevSlide()">← Back</button>
+                <button class="next-btn" onclick="nextSlide()">Next →</button>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="slide">
+                <h2 class="section-title">Education & Experience</h2>
+                <div class="education-content">
+                    <div class="education-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>Bachelor of Computer Science (3rd Year)</h3>
+                                <p class="timeline-date">2023 - Present</p>
+                                <p>University of Science and Technology - Currently pursuing degree with focus on software development, data systems, and cybersecurity.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>Small Business Owner - Perfume Sales</h3>
+                                <p class="timeline-date">Present</p>
+                                <p>Running a successful perfume business, managing inventory, customer relationships, and marketing. Combining entrepreneurial skills with technology.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>IT Technician Intern</h3>
+                                <p class="timeline-date">6 Months</p>
+                                <p>Katutura Intermediate Hospital - Gained practical experience in IT support, system troubleshooting, and digital record management in healthcare environment.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="education-image">
+                        <img src="WhatsApp Image 2026-02-24 at 3.05.21 PM.jpeg" alt="Education">
+                    </div>
+                </div>
+                <button class="back-btn" onclick="prevSlide()">← Back</button>
+                <button class="next-btn" onclick="nextSlide()">Next →</button>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="slide">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h3>Email</h3>
+                                <p>ndasilwohendaalina@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+264 81 777 6017</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h3>Location</h3>
+                                <p>Windhoek, Namibia</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">💼</div>
+                            <div>
+                                <h3>LinkedIn</h3>
+                                <p>linkedin.com/in/alinamartin</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+                <button class="back-btn" onclick="prevSlide()">← Back</button>
+            </section>
+        </div>
+    </div>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>
