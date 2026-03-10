@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Alina Martin</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation */
+.navbar {
+    background: #6A4C93;
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* Contact Form */
+.contact-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    margin-bottom: 30px;
+}
+
+.contact-box h2 {
+    text-align: center;
+    color: #6A4C93;
+    margin-bottom: 10px;
+}
+
+.contact-box p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #6A4C93;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #5a3e80;
+}
+
+/* Contact Info */
+.info {
+    margin-top: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.info h3 {
+    text-align: center;
+    color: #6A4C93;
+}
+
+.info p {
+    text-align: center;
+    margin: 8px 0;
+}
+</style>
+
+</head>
+<body>
+
+<!-- Navigation -->
+<div class="navbar">
+    <h2>Alina Martin</h2>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+</div>
+
+<div class="container">
+
+    <!-- Contact Form -->
+    <div class="contact-box">
+        <h2>Contact Me</h2>
+        <p>Send me a message and I will get back to you.</p>
+
+        <form id="contactForm" action="https://formspree.io/f/xlgpjble" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="subject" placeholder="Subject">
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Inline success message -->
+        <div id="thankYouMessage" style="display:none; text-align:center; color:green; margin-top:15px; font-weight:bold;">
+            ✅ Your message has been sent!
+        </div>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="info">
+        <h3>Contact Information</h3>
+        <p>📧 Email: ndasilwohendaalina@gmail.com</p>
+        <p>📱 Phone: +264 81 777 6017</p>
+        <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/alina-ndasilwohenda-3824383b3/" target="_blank">View Profile</a></p>
+        <p>💻 GitHub: <a href="https://github.com/msmartins27" target="_blank">@msmartins27</a></p>
+    </div>
+
+</div>
+
+<script>
+// Silent Formspree submission with inline message
+const form = document.getElementById('contactForm');
+const thankYou = document.getElementById('thankYouMessage');
+
+form.addEventListener('submit', async function(e) {
+    e.preventDefault(); // prevent redirect / popup
+
+    const submitBtn = form.querySelector('button');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    try {
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            form.reset();
+            thankYou.style.display = 'block'; // show success message
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            setTimeout(() => {
+                thankYou.style.display = 'none'; // hide after 5s
+            }, 5000);
+        } else {
+            throw new Error('Form submission failed');
+        }
+    } catch (error) {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+        alert('Oops! There was a problem sending your message. Please try again or email me directly.');
+        console.error(error);
+    }
+});
+</script>
+
+</body>
+</html>
